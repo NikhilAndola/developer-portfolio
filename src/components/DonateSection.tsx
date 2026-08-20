@@ -43,7 +43,7 @@ export const DonateSection: React.FC = () => {
           Buy Me a <span className="gradient-text-amber">Coffee</span> ☕
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">
-          If AndoLabs Metronome, my open-source code, or mobile engineering work brought you value, fuel my coding sessions with a cup of coffee!
+          If AndolaLabs Metronome, my open-source code, or mobile engineering work brought you value, fuel my coding sessions with a cup of coffee!
         </p>
       </div>
 

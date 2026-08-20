@@ -41,13 +41,13 @@ export const Navbar: React.FC<NavbarProps> = () => {
           <div className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500/20 to-slate-900 border border-cyan-500/40 group-hover:border-cyan-400 transition-all duration-300 shadow-neon-cyan overflow-hidden p-1">
             <img 
               src="/gemini-svg.svg" 
-              alt="AndoLabs Brand Icon" 
+              alt="AndolaLabs Brand Icon" 
               className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(0,242,254,0.6)]" 
             />
           </div>
           <div className="flex items-center gap-1.5">
             <span className="font-display font-extrabold text-white group-hover:text-cyan-400 transition-colors tracking-tight text-lg sm:text-xl">
-              Ando<span className="gradient-text-cyan">Labs</span>
+              Andola<span className="gradient-text-cyan">Labs</span>
             </span>
           </div>
         </a>

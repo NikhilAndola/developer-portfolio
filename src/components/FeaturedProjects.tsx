@@ -16,8 +16,8 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    id: 'andolabs-metronome',
-    title: 'AndoLabs Metronome',
+    id: 'andolalabs-metronome',
+    title: 'AndolaLabs Metronome',
     badge: 'Flagship Debut Mobile App',
     tagline: 'Ultra Low-Latency Audio Timing Engine & Polyrhythm Visualizer',
     description: 'Production cross-platform mobile application engineered for professional musicians, drummers, and stage performers. Features sub-millisecond zero-jitter Web Audio DSP scheduling, tri-modal haptic and visual strobe synchronization, concentric polyrhythmic phasing, and atomic offline preset storage.',
