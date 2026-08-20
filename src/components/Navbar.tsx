@@ -19,14 +19,14 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
     const cleanId = targetId.replace('#', '');
     const element = document.getElementById(cleanId);
     if (element) {
-      const navbarHeight = 85;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      const targetContent = (element.firstElementChild as HTMLElement) || element;
+      const navbarOffset = 78;
+      const targetRect = targetContent.getBoundingClientRect();
+      const offsetPosition = targetRect.top + window.pageYOffset - navbarOffset;
       window.scrollTo({
-        top: offsetPosition,
+        top: Math.max(0, offsetPosition),
         behavior: 'smooth'
       });
-      // Optionally update URL hash without jump
       window.history.pushState(null, '', targetId);
     }
   };

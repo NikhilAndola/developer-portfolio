@@ -105,7 +105,7 @@ export const SocialConnect: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
+    <section id="contact" className="pt-6 pb-16 md:pt-10 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20">
       
       {/* Section Header */}
       <div className="text-center space-y-3 mb-12">

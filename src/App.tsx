@@ -36,11 +36,12 @@ export function App() {
   const handleOpenContact = useCallback(() => {
     const el = document.getElementById('contact');
     if (el) {
-      const navbarHeight = 85;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      const targetContent = (el.firstElementChild as HTMLElement) || el;
+      const navbarOffset = 78;
+      const targetRect = targetContent.getBoundingClientRect();
+      const offsetPosition = targetRect.top + window.pageYOffset - navbarOffset;
       window.scrollTo({
-        top: offsetPosition,
+        top: Math.max(0, offsetPosition),
         behavior: 'smooth'
       });
       window.history.pushState(null, '', '#contact');

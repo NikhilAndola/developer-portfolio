@@ -14,11 +14,12 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
     const cleanId = targetId.replace('#', '');
     const element = document.getElementById(cleanId);
     if (element) {
-      const navbarHeight = 85;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      const targetContent = (element.firstElementChild as HTMLElement) || element;
+      const navbarOffset = 78;
+      const targetRect = targetContent.getBoundingClientRect();
+      const offsetPosition = targetRect.top + window.pageYOffset - navbarOffset;
       window.scrollTo({
-        top: offsetPosition,
+        top: Math.max(0, offsetPosition),
         behavior: 'smooth'
       });
       window.history.pushState(null, '', targetId);
