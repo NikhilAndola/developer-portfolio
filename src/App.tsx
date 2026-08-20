@@ -63,7 +63,7 @@ export function App() {
       />
 
       {/* Main Content Area */}
-      <main className="relative z-10 space-y-8">
+      <main className="relative z-10 space-y-4 md:space-y-6">
         <Hero
           isPlaying={isPlaying}
           onTogglePlay={handleTogglePlay}
