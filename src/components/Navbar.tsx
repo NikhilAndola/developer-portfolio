@@ -43,15 +43,12 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-300">
-          <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
-          <a href="#project-spotlight" className="hover:text-cyan-400 transition-colors">Debut App</a>
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
           <a href="#metronome-demo" className="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
             Simulator
           </a>
           <a href="#architecture" className="hover:text-cyan-400 transition-colors">Architecture</a>
-          <a href="#polyrhythm" className="hover:text-cyan-400 transition-colors">Polyrhythm</a>
           <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
           <a href="#donate" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium">
             <Coffee className="w-3.5 h-3.5 text-amber-400" />
