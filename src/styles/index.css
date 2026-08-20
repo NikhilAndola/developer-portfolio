@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-bg: #07080c;
+    --color-brand-card: #0f1219;
+    --color-brand-border: #232a3d;
+    --color-brand-cyan: #00f2fe;
+    --color-brand-amber: #ff9900;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #07080c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e2538;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2e3a59;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(15, 18, 25, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-panel-glow {
+    background: rgba(18, 22, 34, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    box-shadow: 0 10px 40px -10px rgba(0, 242, 254, 0.15);
+  }
+
+  .neon-border-cyan {
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  }
+
+  .neon-border-amber {
+    border-color: rgba(255, 153, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.2);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 16px rgba(0, 242, 254, 0.6);
+  }
+
+  .text-glow-amber {
+    text-shadow: 0 0 16px rgba(255, 153, 0, 0.6);
+  }
+
+  .gradient-mesh {
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(0, 242, 254, 0.08) 0px, transparent 50%),
+      radial-gradient(at 85% 20%, rgba(138, 43, 226, 0.07) 0px, transparent 50%),
+      radial-gradient(at 50% 80%, rgba(255, 153, 0, 0.06) 0px, transparent 50%);
+  }
+
+  .gradient-text-cyan {
+    background: linear-gradient(135deg, #ffffff 20%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-amber {
+    background: linear-gradient(135deg, #ffffff 20%, #ff9900 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-purple {
+    background: linear-gradient(135deg, #00f2fe 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
