@@ -3,11 +3,11 @@ import { SkillCategory, ArchitectureModule, WorkExperience, EducationItem, Award
 export const PERSONAL_INFO = {
   name: "Nikhil Andola",
   role: "Full Stack Software Development Engineer",
-  focus: "Full Stack Web & Mobile Systems • React, Node.js & TypeScript • Cross-Platform iOS & Android • Cloud DevOps & Microservices • Keycloak SSO",
+  focus: "Full Stack Web & Mobile Systems • TypeScript, Python & Go • Cross-Platform iOS & Android • Node.js & REST APIs • Docker/K8s CI/CD • Keycloak SSO",
   location: "Noida, Uttar Pradesh, India",
   phone: "+91-7579-233-972",
   status: "Full Stack Software Engineer • Open to High-Impact Opportunities",
-  bio: "Full Stack Software Development Engineer with proven expertise architecting end-to-end web and cross-platform mobile systems (iOS & Android). Experienced across TypeScript/React micro-frontends, 50+ reusable component libraries, Node.js RESTful APIs, Keycloak enterprise SSO (10,000+ users), and automated Docker/Kubernetes CI/CD pipelines (77% deployment time reduction). Passionate about scalable distributed architecture, clean code, and zero-drift DSP mobile applications.",
+  bio: "Full Stack Software Development Engineer with proven expertise architecting end-to-end web and cross-platform mobile systems (iOS & Android). Proficient in TypeScript, Python, and Go for high-concurrency microservices, React monorepos, Keycloak enterprise SSO (10,000+ users), and automated Docker/Kubernetes CI/CD pipelines (77% deployment time reduction). Passionate about scalable distributed architecture, clean code, and zero-drift DSP mobile applications.",
   github: "https://github.com/NikhilAndola",
   linkedin: "https://linkedin.com/in/nikhilandola",
   email: "nikhilandola123@gmail.com",
@@ -50,16 +50,16 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ]
   },
   {
-    title: "Backend, APIs & Cloud Identity",
+    title: "Backend, Languages & Cloud Identity",
     icon: "Cpu",
-    description: "Developing resilient backend services, RESTful APIs, Keycloak Single Sign-On (SSO), and scalable database systems.",
+    description: "Developing resilient backend services, RESTful microservices in Node.js, Python & Go, Keycloak SSO, and distributed databases.",
     skills: [
-      { name: "Node.js & Express RESTful APIs", level: 92, tag: "Backend", highlight: true },
+      { name: "Node.js & Express / TypeScript APIs", level: 93, tag: "Backend", highlight: true },
+      { name: "Python (FastAPI / Automation & Scripting)", level: 90, tag: "Backend", highlight: true },
+      { name: "Go / Golang (Concurrency & Microservices)", level: 88, tag: "Systems", highlight: true },
       { name: "Keycloak SSO & Enterprise IAM (10k+ Users)", level: 94, tag: "Auth Security", highlight: true },
-      { name: "Database Design (PostgreSQL / MongoDB / Prisma)", level: 90, tag: "Database", highlight: true },
-      { name: "Secure Authentication & Role-Based Access (RBAC)", level: 93, tag: "Security", highlight: true },
-      { name: "Microservices Architecture & Data Pipelines", level: 89, tag: "Backend" },
-      { name: "API Gateway, WebSockets & Integrations", level: 91, tag: "APIs" },
+      { name: "Database Design (PostgreSQL / MongoDB / Prisma)", level: 91, tag: "Database", highlight: true },
+      { name: "Secure Authentication, RBAC & WebSockets", level: 92, tag: "Security" },
     ]
   },
   {

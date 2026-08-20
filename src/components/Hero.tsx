@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
             Architecting <span className="gradient-text-cyan">Full-Stack Web & Mobile</span> Systems.
           </h1>
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-            I’m <span className="text-white font-semibold">{PERSONAL_INFO.name}</span> — a <strong className="text-cyan-400 font-semibold">Full Stack Software Development Engineer</strong> specializing in TypeScript/React monorepos, cross-platform mobile apps (iOS & Android), Node.js RESTful APIs, Keycloak SSO, and automated Docker/Kubernetes CI/CD pipelines.
+            I’m <span className="text-white font-semibold">{PERSONAL_INFO.name}</span> — a <strong className="text-cyan-400 font-semibold">Full Stack Software Development Engineer</strong> specializing in TypeScript, Python & Go, cross-platform mobile apps (iOS & Android), React monorepos, Keycloak SSO, and automated Docker/Kubernetes CI/CD pipelines.
           </p>
         </div>
 

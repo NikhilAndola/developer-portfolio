@@ -64,12 +64,12 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
           <a 
-            href="#metronome-demo" 
-            onClick={(e) => handleNavClick(e, '#metronome-demo')}
+            href="#project-spotlight" 
+            onClick={(e) => handleNavClick(e, '#project-spotlight')}
             className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-            Simulator
+            Debut App
           </a>
           <a 
             href="#architecture" 
