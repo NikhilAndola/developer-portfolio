@@ -10,12 +10,37 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute, onOpenContact }) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    if (targetId === '#' || !targetId) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const cleanId = targetId.replace('#', '');
+    const element = document.getElementById(cleanId);
+    if (element) {
+      const navbarHeight = 85;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      // Optionally update URL hash without jump
+      window.history.pushState(null, '', targetId);
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-3 transition-all duration-300">
       <div className="max-w-7xl mx-auto glass-panel rounded-2xl px-4 py-2.5 flex items-center justify-between shadow-glass-card border border-slate-800/80 bg-brand-bg/85 backdrop-blur-xl">
         
         {/* Brand & Identity */}
-        <a href="#" className="flex items-center gap-3 group">
+        <a 
+          href="#" 
+          onClick={(e) => handleNavClick(e, '#')}
+          className="flex items-center gap-3 group"
+        >
           <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-slate-900 border border-cyan-500/40 group-hover:border-cyan-400 transition-all duration-300 shadow-neon-cyan overflow-hidden p-1">
             <img 
               src="/gemini-svg.svg" 
@@ -44,13 +69,33 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-          <a href="#metronome-demo" className="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+          <a 
+            href="#metronome-demo" 
+            onClick={(e) => handleNavClick(e, '#metronome-demo')}
+            className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
             Simulator
           </a>
-          <a href="#architecture" className="hover:text-cyan-400 transition-colors">Architecture</a>
-          <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
-          <a href="#donate" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium">
+          <a 
+            href="#architecture" 
+            onClick={(e) => handleNavClick(e, '#architecture')}
+            className="hover:text-cyan-400 transition-colors"
+          >
+            Architecture
+          </a>
+          <a 
+            href="#contact" 
+            onClick={(e) => handleNavClick(e, '#contact')}
+            className="hover:text-cyan-400 transition-colors"
+          >
+            Contact
+          </a>
+          <a 
+            href="#donate" 
+            onClick={(e) => handleNavClick(e, '#donate')}
+            className="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium"
+          >
             <Coffee className="w-3.5 h-3.5 text-amber-400" />
             <span>Buy Coffee</span>
           </a>

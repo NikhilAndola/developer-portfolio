@@ -9,6 +9,22 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const cleanId = targetId.replace('#', '');
+    const element = document.getElementById(cleanId);
+    if (element) {
+      const navbarHeight = 85;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      window.history.pushState(null, '', targetId);
+    }
+  };
+
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
@@ -48,6 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
           
           <a
             href="#skills"
+            onClick={(e) => handleScrollTo(e, '#skills')}
             className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-bold text-sm shadow-neon-cyan hover:shadow-cyan-400/50 transition-all duration-300 flex items-center gap-2.5 group"
           >
             <Layers className="w-4 h-4 text-slate-950 group-hover:scale-110 transition-transform" />
@@ -57,6 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
 
           <a
             href="#project-spotlight"
+            onClick={(e) => handleScrollTo(e, '#project-spotlight')}
             className="px-6 py-3.5 rounded-2xl glass-panel border border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800/60 text-slate-200 hover:text-white font-medium text-sm transition-all flex items-center gap-2 group"
           >
             <Sparkles className="w-4 h-4 text-cyan-400" />

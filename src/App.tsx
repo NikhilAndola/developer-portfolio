@@ -36,7 +36,14 @@ export function App() {
   const handleOpenContact = useCallback(() => {
     const el = document.getElementById('contact');
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 85;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      window.history.pushState(null, '', '#contact');
     }
   }, []);
 
