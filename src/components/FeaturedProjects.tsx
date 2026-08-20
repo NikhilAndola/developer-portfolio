@@ -28,8 +28,8 @@ const PROJECTS: Project[] = [
       { label: 'Architecture', value: 'Lookahead DSP' },
     ],
     tags: ['React Native', 'Expo SDK', 'Web Audio API', 'TypeScript', 'DSP Timing', 'Haptics'],
-    githubUrl: 'https://github.com/NikhilAndola/andolab-metronome-page',
-    liveUrl: 'https://github.com/NikhilAndola/andolab-metronome-page',
+    githubUrl: 'https://github.com/NikhilAndola/andolabs-metronome',
+    liveUrl: 'https://nikhilandola.github.io/andolabs-metronome/',
     primary: true,
   }
 ];
