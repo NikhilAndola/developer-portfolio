@@ -7,7 +7,7 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const DonateSection: React.FC = () => {
   const [copiedUpi, setCopiedUpi] = useState<boolean>(false);
-  const [amount, setAmount] = useState<number>(150);
+  const [amount, setAmount] = useState<number>(100);
 
   const handleCopyUpi = () => {
     navigator.clipboard.writeText(PERSONAL_INFO.upiId);
@@ -16,11 +16,11 @@ export const DonateSection: React.FC = () => {
   };
 
   // Compute coffee cup equivalent
-  const coffeeCups = Math.max(1, Math.round(amount / 150));
+  const coffeeCups = Math.max(1, Math.round(amount / 100));
   const getCoffeeDescription = (val: number) => {
-    if (val <= 150) return '1 Warm Cup of Espresso ☕';
-    if (val <= 300) return '2 Large Cappuccinos ☕☕';
-    if (val <= 600) return '4 Cups & Late-Night Coding Fuel ☕☕☕☕';
+    if (val <= 100) return '1 Warm Cup of Espresso ☕';
+    if (val <= 250) return '2 Large Cappuccinos ☕☕';
+    if (val <= 500) return '4 Cups & Late-Night Coding Fuel ☕☕☕☕';
     return 'Supercharged Coffee Feast for the Month! ☕⚡';
   };
 
@@ -43,7 +43,7 @@ export const DonateSection: React.FC = () => {
           Buy Me a <span className="gradient-text-amber">Coffee</span> ☕
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">
-          If Metronome Pro, my open-source code, or mobile engineering work brought you value, fuel my coding sessions with a cup of coffee!
+          If AndoLabs Metronome, my open-source code, or mobile engineering work brought you value, fuel my coding sessions with a cup of coffee!
         </p>
       </div>
 
@@ -109,7 +109,7 @@ export const DonateSection: React.FC = () => {
                 Every Cup Keeps the Code Flowing
               </h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Choose how many cups of coffee you’d like to treat me to. Use the slider below to select any amount between <strong>₹150</strong> and <strong>₹1,000</strong>.
+                Choose how many cups of coffee you’d like to treat me to. Use the slider below to select any amount between <strong>₹100</strong> and <strong>₹1,000</strong>.
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export const DonateSection: React.FC = () => {
               <div className="space-y-1.5">
                 <input
                   type="range"
-                  min="150"
+                  min="100"
                   max="1000"
                   step="50"
                   value={amount}
@@ -146,8 +146,8 @@ export const DonateSection: React.FC = () => {
                 
                 {/* Min / Max Labels */}
                 <div className="flex justify-between text-[10px] font-mono text-slate-500">
-                  <span>₹150</span>
-                  <span>₹300</span>
+                  <span>₹100</span>
+                  <span>₹250</span>
                   <span>₹500</span>
                   <span>₹750</span>
                   <span>₹1,000</span>
@@ -156,7 +156,7 @@ export const DonateSection: React.FC = () => {
 
               {/* Quick Preset Buttons */}
               <div className="flex flex-wrap gap-1.5 pt-0.5">
-                {[150, 300, 500, 750, 1000].map((val) => (
+                {[100, 250, 500, 750, 1000].map((val) => (
                   <button
                     key={val}
                     onClick={() => setAmount(val)}
