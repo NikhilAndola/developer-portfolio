@@ -1,15 +1,15 @@
 import React from 'react';
-import { Github, Linkedin, Volume2, VolumeX, Sparkles, Coffee } from 'lucide-react';
+import { Github, Linkedin, Volume2, VolumeX, Coffee } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface NavbarProps {
   isPlaying: boolean;
   isMuted: boolean;
   onToggleMute: () => void;
-  onOpenContact: () => void;
+  onOpenContact?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute, onOpenContact }) => {
+export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute }) => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     if (targetId === '#' || !targetId) {
@@ -134,15 +134,6 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
             <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform text-blue-400" />
             <span className="hidden lg:inline">LinkedIn</span>
           </a>
-
-          {/* Connect CTA */}
-          <button
-            onClick={onOpenContact}
-            className="px-3 py-2 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-semibold text-xs transition-all shadow-neon-cyan hover:shadow-cyan-500/50 flex items-center gap-1.5"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Connect</span>
-          </button>
 
         </div>
 

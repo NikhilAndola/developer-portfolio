@@ -95,7 +95,7 @@ export const SocialConnect: React.FC = () => {
           Let’s Build Something <span className="gradient-text-cyan">Exceptional</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">
-          Available for high-impact Software Development Engineer roles, frontend architecture, and technical collaborations.
+          Available for high-impact Full Stack Software Development Engineer roles, cross-platform mobile systems, and technical collaborations.
         </p>
       </div>
 
@@ -126,7 +126,7 @@ export const SocialConnect: React.FC = () => {
               <ExternalLink className="w-4 h-4 text-slate-600 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition-all" />
             </div>
             <p className="text-xs text-slate-300 mt-2.5 leading-relaxed">
-              Explore open-source monorepos, React/TypeScript component systems, CI/CD workflows, and production codebases.
+              Explore open-source monorepos, cross-platform React Native apps, full-stack systems, CI/CD workflows, and production codebases.
             </p>
             <div className="mt-2.5 flex items-center gap-1.5 text-xs font-mono text-cyan-400 font-medium">
               <span>github.com/NikhilAndola</span>
@@ -156,7 +156,7 @@ export const SocialConnect: React.FC = () => {
               <ExternalLink className="w-4 h-4 text-slate-600 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all" />
             </div>
             <p className="text-xs text-slate-300 mt-2.5 leading-relaxed">
-              Connect for full-time engineering roles, frontend architecture discussions, and technical team leadership opportunities.
+              Connect for full-time engineering roles, full-stack & mobile architecture discussions, and technical team leadership opportunities.
             </p>
             <div className="mt-2.5 flex items-center gap-1.5 text-xs font-mono text-blue-400 font-medium">
               <span>linkedin.com/in/nikhilandola</span>
@@ -176,7 +176,7 @@ export const SocialConnect: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5 text-xs text-slate-300">
                 <Briefcase className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <span>Open for Full-Time SDE & Senior Frontend roles</span>
+                <span>Open for Full-Time SDE & Full-Stack / Mobile roles</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-slate-300">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />

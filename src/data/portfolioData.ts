@@ -2,12 +2,12 @@ import { SkillCategory, ArchitectureModule, WorkExperience, EducationItem, Award
 
 export const PERSONAL_INFO = {
   name: "Nikhil Andola",
-  role: "Software Development Engineer",
-  focus: "Frontend Monorepo Architecture • React.js & TypeScript • Micro-frontends • DevOps & CI/CD • Keycloak SSO",
+  role: "Full Stack Software Development Engineer",
+  focus: "Full Stack Web & Mobile Systems • React, Node.js & TypeScript • Cross-Platform iOS & Android • Cloud DevOps & Microservices • Keycloak SSO",
   location: "Noida, Uttar Pradesh, India",
   phone: "+91-7579-233-972",
-  status: "Software Development Engineer • Open to High-Impact Opportunities",
-  bio: "Software Development Engineer with proven expertise architecting scalable monorepo frontend systems, 50+ reusable TypeScript/React component libraries, and micro-frontends. Track record of integrating Keycloak SSO for 10,000+ users and slashing CI/CD deployment times from 45 min to 10 min using Docker and Kubernetes. Experienced in leading engineering teams, driving 25% performance gains, and developing resilient web and mobile applications.",
+  status: "Full Stack Software Engineer • Open to High-Impact Opportunities",
+  bio: "Full Stack Software Development Engineer with proven expertise architecting end-to-end web and cross-platform mobile systems (iOS & Android). Experienced across TypeScript/React micro-frontends, 50+ reusable component libraries, Node.js RESTful APIs, Keycloak enterprise SSO (10,000+ users), and automated Docker/Kubernetes CI/CD pipelines (77% deployment time reduction). Passionate about scalable distributed architecture, clean code, and zero-drift DSP mobile applications.",
   github: "https://github.com/NikhilAndola",
   linkedin: "https://linkedin.com/in/nikhilandola",
   email: "nikhilandola123@gmail.com",
@@ -16,63 +16,63 @@ export const PERSONAL_INFO = {
 };
 
 export const HIGHLIGHT_STATS = [
-  { value: "50+", label: "Reusable Components", sublabel: "TypeScript React Library" },
-  { value: "10,000+", label: "Users Authenticated", sublabel: "Keycloak SSO Integration" },
-  { value: "77%", label: "Deployment Reduction", sublabel: "45m → 10m via Docker & K8s" },
-  { value: "+60%", label: "Monorepo Build Boost", sublabel: "Turborepo Multi-Team Setup" },
+  { value: "Full Stack", label: "Web & Mobile Systems", sublabel: "React, Node.js & React Native" },
+  { value: "iOS & Android", label: "Cross-Platform Apps", sublabel: "Expo & Native Hardware Bridges" },
+  { value: "10,000+", label: "Users Authenticated", sublabel: "Keycloak SSO & API Security" },
+  { value: "77%", label: "Deployment Cut", sublabel: "45m → 10m via Docker & K8s" },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    title: "Cross-Platform Mobile (iOS & Android)",
+    icon: "Smartphone",
+    description: "Engineering high-performance cross-platform mobile applications for iOS & Android with React Native, Expo, and native hardware bridges.",
+    skills: [
+      { name: "React Native & Expo SDK (iOS & Android)", level: 95, tag: "Cross-Platform", highlight: true },
+      { name: "Native Hardware Bridges (Audio DSP, Haptics)", level: 93, tag: "Native Bridge", highlight: true },
+      { name: "Cross-Platform 60 FPS UI & Gestures", level: 94, tag: "Mobile UI", highlight: true },
+      { name: "Offline Persistence & State (AsyncStorage/SQLite)", level: 92, tag: "Data Storage", highlight: true },
+      { name: "App Store & Google Play Store Deployment", level: 90, tag: "Distribution" },
+      { name: "TypeScript Strict & Mobile Safe Area UI", level: 96, tag: "Mobile Core" },
+    ]
+  },
   {
     title: "Frontend & Monorepo Architecture",
     icon: "Layout",
     description: "Designing modular monorepos, reusable TypeScript component libraries, and performant micro-frontend web applications.",
     skills: [
-      { name: "TypeScript & JavaScript (ESNext)", level: 96, tag: "Core", highlight: true },
-      { name: "React.js & Redux State", level: 96, tag: "Frontend", highlight: true },
-      { name: "Monorepo (Turborepo)", level: 94, tag: "Architecture", highlight: true },
-      { name: "Micro-frontend Architecture", level: 92, tag: "Architecture", highlight: true },
-      { name: "50+ Reusable Component Systems", level: 95, tag: "Design System", highlight: true },
-      { name: "HTML5, CSS3 & Responsive UI", level: 94, tag: "Styling" },
+      { name: "TypeScript & Modern JavaScript (ESNext)", level: 96, tag: "Core", highlight: true },
+      { name: "React.js & State Systems (Redux/Context)", level: 96, tag: "Frontend", highlight: true },
+      { name: "Turborepo & Monorepo Workspaces (+60% Build)", level: 94, tag: "Architecture", highlight: true },
+      { name: "Micro-frontend Distributed Architecture", level: 92, tag: "Architecture", highlight: true },
+      { name: "50+ Reusable Component Systems & Design Tokens", level: 95, tag: "Design System", highlight: true },
+      { name: "Tailwind CSS, HTML5 & Responsive UX", level: 94, tag: "Styling" },
     ]
   },
   {
-    title: "DevOps, CI/CD & Testing",
-    icon: "Layers",
-    description: "Automating cloud deployments, containerization, and rigorous automated testing suites with Jest & Cypress.",
-    skills: [
-      { name: "GitHub Actions CI/CD", level: 95, tag: "Automation", highlight: true },
-      { name: "Docker Containerization", level: 92, tag: "DevOps", highlight: true },
-      { name: "Kubernetes (K8s)", level: 88, tag: "Orchestration", highlight: true },
-      { name: "Jest & Cypress (85% Coverage)", level: 93, tag: "QA / Testing", highlight: true },
-      { name: "Git & GitHub Workflow", level: 96, tag: "VCS", highlight: true },
-      { name: "Deployment Time Optimization", level: 94, tag: "DevOps" },
-    ]
-  },
-  {
-    title: "Cloud & Identity Management",
+    title: "Backend, APIs & Cloud Identity",
     icon: "Cpu",
-    description: "Implementing enterprise Single Sign-On (SSO), secure authentication layers, and multi-cloud infrastructure.",
+    description: "Developing resilient backend services, RESTful APIs, Keycloak Single Sign-On (SSO), and scalable database systems.",
     skills: [
-      { name: "Keycloak (SSO & IAM)", level: 94, tag: "Auth Security", highlight: true },
-      { name: "AWS Cloud Infrastructure", level: 89, tag: "Cloud", highlight: true },
-      { name: "OpenStack Cloud", level: 86, tag: "Cloud" },
-      { name: "Secure Authentication (10k+ Users)", level: 93, tag: "Security", highlight: true },
-      { name: "RESTful API Integration", level: 92, tag: "Backend", highlight: true },
-      { name: "Data Flows & Database Design", level: 88, tag: "Backend" },
+      { name: "Node.js & Express RESTful APIs", level: 92, tag: "Backend", highlight: true },
+      { name: "Keycloak SSO & Enterprise IAM (10k+ Users)", level: 94, tag: "Auth Security", highlight: true },
+      { name: "Database Design (PostgreSQL / MongoDB / Prisma)", level: 90, tag: "Database", highlight: true },
+      { name: "Secure Authentication & Role-Based Access (RBAC)", level: 93, tag: "Security", highlight: true },
+      { name: "Microservices Architecture & Data Pipelines", level: 89, tag: "Backend" },
+      { name: "API Gateway, WebSockets & Integrations", level: 91, tag: "APIs" },
     ]
   },
   {
-    title: "Leadership & Full-Stack Engineering",
-    icon: "Smartphone",
-    description: "Cross-functional team leadership, SEO optimization, and high-performance native & web engineering.",
+    title: "DevOps, Cloud & System Testing",
+    icon: "Layers",
+    description: "Automating cloud deployments, Docker containerization, Kubernetes orchestration, and automated test frameworks.",
     skills: [
-      { name: "Engineering Team Leadership (5 Devs)", level: 94, tag: "Leadership", highlight: true },
-      { name: "Cross-Functional Collaboration", level: 93, tag: "Agile" },
-      { name: "SEO Optimization & Performance (+30%)", level: 91, tag: "Growth", highlight: true },
-      { name: "React Native & Mobile Systems", level: 90, tag: "Mobile" },
-      { name: "Code Quality & Agile Sprints", level: 95, tag: "Process", highlight: true },
-      { name: "WordPress Plugin & Custom APIs", level: 88, tag: "Ecosystem" },
+      { name: "GitHub Actions CI/CD (77% Time Reduction)", level: 95, tag: "Automation", highlight: true },
+      { name: "Docker Containerization & Multi-Stage Builds", level: 92, tag: "DevOps", highlight: true },
+      { name: "Kubernetes (K8s) Cluster Orchestration", level: 88, tag: "Cloud", highlight: true },
+      { name: "Jest & Cypress Automated Testing (85% Coverage)", level: 93, tag: "QA / Testing", highlight: true },
+      { name: "AWS & OpenStack Cloud Infrastructure", level: 89, tag: "Cloud" },
+      { name: "Git & GitHub Enterprise Workflows", level: 96, tag: "VCS", highlight: true },
     ]
   }
 ];

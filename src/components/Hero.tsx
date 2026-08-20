@@ -53,10 +53,10 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
         {/* Hero Title */}
         <div className="space-y-3 max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.15]">
-            Architecting <span className="gradient-text-cyan">Frontend Monorepos</span> & Scalable Systems.
+            Architecting <span className="gradient-text-cyan">Full-Stack Web & Mobile</span> Systems.
           </h1>
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-            I’m <span className="text-white font-semibold">{PERSONAL_INFO.name}</span> — a <strong className="text-cyan-400 font-semibold">Software Development Engineer</strong> specializing in TypeScript/React component libraries, Turborepo modular architecture, Keycloak SSO authentication, and automated Docker/Kubernetes CI/CD pipelines.
+            I’m <span className="text-white font-semibold">{PERSONAL_INFO.name}</span> — a <strong className="text-cyan-400 font-semibold">Full Stack Software Development Engineer</strong> specializing in TypeScript/React monorepos, cross-platform mobile apps (iOS & Android), Node.js RESTful APIs, Keycloak SSO, and automated Docker/Kubernetes CI/CD pipelines.
           </p>
         </div>
 

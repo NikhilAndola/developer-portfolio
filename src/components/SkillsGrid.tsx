@@ -20,13 +20,13 @@ export const SkillsGrid: React.FC = () => {
       <div className="text-center space-y-2 mb-6 md:mb-8">
         <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-[11px] font-mono text-cyan-400">
           <Sparkles className="w-3 h-3" />
-          <span>Technical Stack</span>
+          <span>Full-Stack & Mobile Stack</span>
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-white tracking-tight">
-          Software Engineering <span className="gradient-text-cyan">Skills Matrix</span>
+          Full Stack & Mobile <span className="gradient-text-cyan">Skills Matrix</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">
-          Specialized expertise across TypeScript monorepos, micro-frontends, Keycloak SSO, Docker/K8s CI/CD, and full-stack systems.
+          Specialized expertise spanning cross-platform mobile (iOS & Android), TypeScript monorepos, Node.js REST APIs, Keycloak SSO, and Docker/K8s cloud CI/CD.
         </p>
       </div>
 
