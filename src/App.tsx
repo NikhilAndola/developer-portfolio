@@ -64,6 +64,8 @@ export function App() {
 
         <SkillsGrid />
 
+        <ProjectDeepDive />
+
         <MetronomeDemo
           isPlaying={isPlaying}
           onTogglePlay={handleTogglePlay}
@@ -72,8 +74,6 @@ export function App() {
           bpm={bpm}
           setBpm={setBpm}
         />
-
-        <ProjectDeepDive />
 
         <ArchitectureExplorer />
 
