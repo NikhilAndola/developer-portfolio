@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
         >
           <div className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500/20 to-slate-900 border border-cyan-500/40 group-hover:border-cyan-400 transition-all duration-300 shadow-neon-cyan overflow-hidden p-1">
             <img 
-              src="/gemini-svg.svg" 
+              src="/andolalabs_icon.svg" 
               alt="AndolaLabs Brand Icon" 
               className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(0,242,254,0.6)]" 
             />
