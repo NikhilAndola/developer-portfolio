@@ -1,15 +1,12 @@
 import React from 'react';
-import { Github, Linkedin, Volume2, VolumeX, Coffee } from 'lucide-react';
+import { Github, Linkedin, Coffee } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface NavbarProps {
-  isPlaying: boolean;
-  isMuted: boolean;
-  onToggleMute: () => void;
   onOpenContact?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute }) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     if (targetId === '#' || !targetId) {
@@ -47,12 +44,6 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
               alt="AndoLabs Brand Icon" 
               className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(0,242,254,0.6)]" 
             />
-            {isPlaying && (
-              <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
-              </span>
-            )}
           </div>
           <div className="flex items-center gap-1.5">
             <span className="font-display font-extrabold text-white group-hover:text-cyan-400 transition-colors tracking-tight text-lg sm:text-xl">
@@ -64,19 +55,18 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
           <a 
-            href="#project-spotlight" 
-            onClick={(e) => handleNavClick(e, '#project-spotlight')}
-            className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-            Debut App
-          </a>
-          <a 
-            href="#architecture" 
-            onClick={(e) => handleNavClick(e, '#architecture')}
+            href="#skills" 
+            onClick={(e) => handleNavClick(e, '#skills')}
             className="hover:text-cyan-400 transition-colors"
           >
-            Architecture
+            Skills
+          </a>
+          <a 
+            href="#projects" 
+            onClick={(e) => handleNavClick(e, '#projects')}
+            className="hover:text-cyan-400 transition-colors"
+          >
+            Featured Projects
           </a>
           <a 
             href="#contact" 
@@ -97,19 +87,6 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
 
         {/* Actions & Profiles */}
         <div className="flex items-center gap-2 sm:gap-3">
-          
-          {/* Mute Audio Toggle */}
-          <button
-            onClick={onToggleMute}
-            title={isMuted ? "Unmute Audio Synthesis" : "Mute Audio Synthesis"}
-            className={`p-2 rounded-xl border transition-all duration-200 ${
-              isMuted 
-                ? 'bg-slate-900 border-slate-700 text-slate-400 hover:text-slate-200' 
-                : 'bg-cyan-950/60 border-cyan-500/40 text-cyan-400 shadow-neon-cyan hover:bg-cyan-900/40'
-            }`}
-          >
-            {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 animate-pulse" />}
-          </button>
 
           {/* GitHub Button */}
           <a

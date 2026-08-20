@@ -1,14 +1,12 @@
 import React from 'react';
-import { Play, ArrowRight, Github, Linkedin, Layers, Sparkles, MapPin } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Layers, Sparkles, MapPin, Mail } from 'lucide-react';
 import { PERSONAL_INFO, HIGHLIGHT_STATS } from '../data/portfolioData';
 
 interface HeroProps {
-  isPlaying: boolean;
-  onTogglePlay: () => void;
-  bpm: number;
+  onOpenContact?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
+export const Hero: React.FC<HeroProps> = () => {
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const cleanId = targetId.replace('#', '');
@@ -74,24 +72,22 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
           </a>
 
           <a
-            href="#project-spotlight"
-            onClick={(e) => handleScrollTo(e, '#project-spotlight')}
+            href="#projects"
+            onClick={(e) => handleScrollTo(e, '#projects')}
             className="px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl glass-panel border border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800/60 text-slate-200 hover:text-white font-medium text-xs sm:text-sm transition-all flex items-center gap-2 group"
           >
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Debut App Spotlight</span>
+            <span>Featured Projects</span>
           </a>
 
-          <button
-            onClick={onTogglePlay}
-            className="px-4 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-900/90 border border-cyan-500/30 hover:border-cyan-400 text-cyan-300 hover:text-white font-mono text-xs transition-all flex items-center gap-2 group"
+          <a
+            href="#contact"
+            onClick={(e) => handleScrollTo(e, '#contact')}
+            className="px-4 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white font-mono text-xs transition-all flex items-center gap-2 group"
           >
-            <Play className={`w-3 h-3 fill-current text-cyan-400 ${isPlaying ? 'animate-spin-slow' : 'group-hover:scale-110 transition-transform'}`} />
-            <span>{isPlaying ? 'Pause Simulator' : 'Test Audio Simulator'}</span>
-            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">
-              {bpm} BPM
-            </span>
-          </button>
+            <Mail className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Get in Touch</span>
+          </a>
 
           <a
             href={PERSONAL_INFO.linkedin}
