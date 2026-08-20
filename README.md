@@ -2,7 +2,7 @@
 
 A high-performance, dark-mode-first developer portfolio and brand showcase built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Web Audio API**.
 
-The portfolio is themed around precision mobile engineering and audio DSP, spotlighting the **Metronome Pro (BeatPulse)** cross-platform project built with React Native & Expo SDK 57.
+The portfolio highlights full-stack web and mobile engineering, spotlighting the **AndoLabs Metronome** cross-platform flagship project built with React Native & Web Audio API.
 
 ---
 
