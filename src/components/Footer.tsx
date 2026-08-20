@@ -13,18 +13,18 @@ export const Footer: React.FC = () => {
         
         {/* Brand & Tagline */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-slate-900 border border-cyan-500/40 flex items-center justify-center p-1 shadow-neon-cyan overflow-hidden">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500/20 to-slate-900 border border-cyan-500/40 flex items-center justify-center p-1 shadow-neon-cyan overflow-hidden">
             <img 
               src="/gemini-svg.svg" 
-              alt="Nikhil Andola Brand Icon" 
+              alt="AndoLabs Brand Icon" 
               className="w-full h-full object-contain drop-shadow-[0_0_6px_rgba(0,242,254,0.5)]" 
             />
           </div>
           <div>
             <div className="font-display font-bold text-white text-sm flex items-center gap-2">
-              <span>{PERSONAL_INFO.name}</span>
+              <span>Ando<span className="gradient-text-cyan">Labs</span></span>
               <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">
-                SDE Portfolio
+                Engineering
               </span>
             </div>
             <div className="text-xs text-slate-400 font-mono">
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
             className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-400 hover:text-cyan-300 transition-colors"
-            title={`Email: ${PERSONAL_INFO.email}`}
+            title="Send Email"
           >
             <Mail className="w-4 h-4" />
           </a>

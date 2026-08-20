@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { 
-  Github, Linkedin, Mail, Copy, Check, Send, Sparkles, 
+  Github, Linkedin, Mail, Check, Send, Sparkles, 
   ExternalLink, MessageSquare, Loader2, AlertCircle, RefreshCw,
-  Phone, MapPin
+  Clock, ShieldCheck, Briefcase
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -16,8 +16,6 @@ const SUBJECT_OPTIONS = [
 ];
 
 export const SocialConnect: React.FC = () => {
-  const [copiedEmail, setCopiedEmail] = useState<boolean>(false);
-  const [copiedPhone, setCopiedPhone] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -28,18 +26,6 @@ export const SocialConnect: React.FC = () => {
     subject: SUBJECT_OPTIONS[0],
     message: '',
   });
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(PERSONAL_INFO.email);
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText(PERSONAL_INFO.phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
-  };
 
   // Direct AJAX Submission via Free Open-Source FormSubmit Endpoint
   const handleSubmitMessage = async (e: React.FormEvent) => {
@@ -73,11 +59,9 @@ export const SocialConnect: React.FC = () => {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: SUBJECT_OPTIONS[0], message: '' });
       } else {
-        // If first-time activation is pending, formsubmit returns 200/info or success message
         setSubmitStatus('success');
       }
     } catch {
-      // Fallback gracefully to mailto
       setSubmitStatus('error');
       setErrorMessage('Network transmission failed. You can launch your email client directly below:');
     } finally {
@@ -117,7 +101,7 @@ export const SocialConnect: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         
-        {/* Left Column: Social Profile Cards & Direct Contact Box (5 cols) */}
+        {/* Left Column: Social Profile Cards & Availability (5 cols) */}
         <div className="lg:col-span-5 space-y-3">
           
           {/* GitHub Profile Card */}
@@ -180,54 +164,23 @@ export const SocialConnect: React.FC = () => {
             </div>
           </a>
 
-          {/* Direct Email Quick Copy Box */}
-          <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-lg bg-cyan-950/60 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-                <Mail className="w-3.5 h-3.5" />
+          {/* Availability & Engagement Highlights Card */}
+          <div className="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2.5">
+            <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
+              Engagement & Response:
+            </span>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2.5 text-xs text-slate-300">
+                <Clock className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                <span>Fast response time (typically &lt; 24h)</span>
               </div>
-              <div>
-                <div className="text-[10px] font-mono text-slate-400">Email Address</div>
-                <div className="text-xs font-mono text-cyan-300 font-bold select-all">{PERSONAL_INFO.email}</div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-300">
+                <Briefcase className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                <span>Open for Full-Time SDE & Senior Frontend roles</span>
               </div>
-            </div>
-            <button
-              onClick={handleCopyEmail}
-              className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-600 text-slate-300 text-[11px] font-mono transition-all flex items-center gap-1 active:scale-95"
-            >
-              {copiedEmail ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
-              <span>{copiedEmail ? 'Copied' : 'Copy'}</span>
-            </button>
-          </div>
-
-          {/* Direct Phone & Location Box */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center text-emerald-400">
-                  <Phone className="w-3.5 h-3.5" />
-                </div>
-                <div>
-                  <div className="text-[9px] font-mono text-slate-400">Phone</div>
-                  <div className="text-[11px] font-mono text-slate-200 font-semibold">{PERSONAL_INFO.phone}</div>
-                </div>
-              </div>
-              <button
-                onClick={handleCopyPhone}
-                className="p-1 rounded-md bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
-                title="Copy Phone"
-              >
-                {copiedPhone ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
-              </button>
-            </div>
-
-            <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center text-amber-400">
-                <MapPin className="w-3.5 h-3.5" />
-              </div>
-              <div>
-                <div className="text-[9px] font-mono text-slate-400">Location</div>
-                <div className="text-[11px] font-mono text-slate-200 font-semibold truncate">{PERSONAL_INFO.location}</div>
+              <div className="flex items-center gap-2.5 text-xs text-slate-300">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Direct communication via verified channels</span>
               </div>
             </div>
           </div>
@@ -249,7 +202,7 @@ export const SocialConnect: React.FC = () => {
             </div>
             <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/50 border border-emerald-500/30 text-[10px] font-mono text-emerald-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-              <span>Direct to {PERSONAL_INFO.email}</span>
+              <span>Direct Dispatch</span>
             </div>
           </div>
 
@@ -261,7 +214,7 @@ export const SocialConnect: React.FC = () => {
               <div className="space-y-1">
                 <h4 className="text-base font-display font-bold text-white">Email Sent Successfully!</h4>
                 <p className="text-xs text-slate-300 max-w-sm mx-auto leading-relaxed">
-                  Thank you for reaching out. Your message has been delivered to <strong className="text-cyan-400">{PERSONAL_INFO.email}</strong>.
+                  Thank you for reaching out. Your message has been delivered directly. Nikhil will get back to you promptly!
                 </p>
               </div>
 
@@ -376,7 +329,7 @@ export const SocialConnect: React.FC = () => {
               </div>
 
               <p className="text-[10px] font-mono text-slate-500 text-center pt-0.5">
-                Direct route to {PERSONAL_INFO.email}
+                Encrypted & delivered directly to inbox
               </p>
             </form>
           )}
