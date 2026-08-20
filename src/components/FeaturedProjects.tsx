@@ -1,6 +1,5 @@
 import React from 'react';
 import { Sparkles, ExternalLink, Github, ArrowRight } from 'lucide-react';
-import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface Project {
   id: string;
@@ -32,38 +31,6 @@ const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/NikhilAndola/andolab-metronome-page',
     liveUrl: 'https://github.com/NikhilAndola/andolab-metronome-page',
     primary: true,
-  },
-  {
-    id: 'monorepo-design-system',
-    title: 'Enterprise Turborepo UI System',
-    badge: 'Frontend Monorepo Architecture',
-    tagline: '50+ Reusable TypeScript Components with Distributed Caching',
-    description: 'Modular enterprise frontend monorepo housing strictly-typed React design tokens, polymorphic accessible components, and automated multi-package versioning. Boosted multi-team build consistency and accelerated CI/CD pipelines by 60%.',
-    metrics: [
-      { label: 'Reusable Components', value: '50+ UI Tokens' },
-      { label: 'Build Acceleration', value: '+60% Speed' },
-      { label: 'Type Safety', value: 'Strict TypeScript' },
-      { label: 'Workspace', value: 'Turborepo' },
-    ],
-    tags: ['Turborepo', 'React.js', 'TypeScript', 'Tailwind CSS', 'Micro-frontends', 'CI/CD'],
-    githubUrl: PERSONAL_INFO.github,
-    primary: false,
-  },
-  {
-    id: 'keycloak-sso-iam',
-    title: 'Keycloak Enterprise SSO & Identity',
-    badge: 'Cloud & Auth Security',
-    tagline: 'High-Throughput Single Sign-On Authentication for 10,000+ Users',
-    description: 'Distributed authentication and IAM architecture with automated token refresh interceptors, role-based access control (RBAC), CSP/CORS security hardening, and resilient Docker/Kubernetes container orchestration.',
-    metrics: [
-      { label: 'Users Authenticated', value: '10,000+ Active' },
-      { label: 'Deploy Reduction', value: '45m → 10m (77%)' },
-      { label: 'Testing Coverage', value: '85% Jest/Cypress' },
-      { label: 'Security Standard', value: 'OAuth2 / OIDC' },
-    ],
-    tags: ['Keycloak SSO', 'Docker', 'Kubernetes', 'OAuth2/OIDC', 'Node.js', 'GitHub Actions'],
-    githubUrl: PERSONAL_INFO.github,
-    primary: false,
   }
 ];
 
@@ -75,13 +42,13 @@ export const FeaturedProjects: React.FC = () => {
       <div className="text-center space-y-2 mb-6 md:mb-8">
         <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-[11px] font-mono text-cyan-400">
           <Sparkles className="w-3 h-3" />
-          <span>Engineering Portfolio</span>
+          <span>Debut Application</span>
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-white tracking-tight">
-          Featured <span className="gradient-text-cyan">Projects & Architecture</span>
+          Featured <span className="gradient-text-cyan">Project Spotlight</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">
-          Production mobile applications, scalable TypeScript monorepos, and enterprise cloud authentication infrastructure.
+          Flagship cross-platform mobile release showcasing zero-drift DSP audio timing, multi-sensory sync, and offline persistence.
         </p>
       </div>
 
