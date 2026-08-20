@@ -44,7 +44,6 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, isMuted, onToggleMute
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-          <a href="#experience" className="hover:text-cyan-400 transition-colors">Experience</a>
           <a href="#skills" className="hover:text-cyan-400 transition-colors">Stack & Skills</a>
           <a href="#project-spotlight" className="hover:text-cyan-400 transition-colors">Debut App</a>
           <a href="#metronome-demo" className="hover:text-cyan-400 transition-colors flex items-center gap-1.5">

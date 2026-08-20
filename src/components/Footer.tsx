@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <div className="text-xs text-slate-400 font-mono">
-              Software Development Engineer @ Coredge.io • React & TypeScript Monorepos
+              Software Development Engineer • React & TypeScript Monorepos
             </div>
           </div>
         </div>

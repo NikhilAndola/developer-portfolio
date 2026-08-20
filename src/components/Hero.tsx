@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, ArrowRight, Github, Linkedin, Layers, Briefcase, MapPin } from 'lucide-react';
+import { Play, ArrowRight, Github, Linkedin, Layers, Sparkles, MapPin } from 'lucide-react';
 import { PERSONAL_INFO, HIGHLIGHT_STATS } from '../data/portfolioData';
 
 interface HeroProps {
@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
             Architecting <span className="gradient-text-cyan">Frontend Monorepos</span> & Scalable Systems.
           </h1>
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-            I’m <span className="text-white font-semibold">{PERSONAL_INFO.name}</span> — a <strong className="text-cyan-400 font-semibold">Software Development Engineer</strong> at <strong className="text-white font-semibold">Coredge.io</strong> specializing in TypeScript/React component libraries, Turborepo modular architecture, Keycloak SSO authentication, and automated Docker/Kubernetes CI/CD pipelines.
+            I’m <span className="text-white font-semibold">{PERSONAL_INFO.name}</span> — a <strong className="text-cyan-400 font-semibold">Software Development Engineer</strong> specializing in TypeScript/React component libraries, Turborepo modular architecture, Keycloak SSO authentication, and automated Docker/Kubernetes CI/CD pipelines.
           </p>
         </div>
 
@@ -47,20 +47,20 @@ export const Hero: React.FC<HeroProps> = ({ isPlaying, onTogglePlay, bpm }) => {
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           
           <a
-            href="#experience"
+            href="#skills"
             className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-bold text-sm shadow-neon-cyan hover:shadow-cyan-400/50 transition-all duration-300 flex items-center gap-2.5 group"
           >
-            <Briefcase className="w-4 h-4 text-slate-950 group-hover:scale-110 transition-transform" />
-            <span>View Work Experience</span>
+            <Layers className="w-4 h-4 text-slate-950 group-hover:scale-110 transition-transform" />
+            <span>Explore Skills Matrix</span>
             <ArrowRight className="w-4 h-4 text-slate-950 group-hover:translate-x-1 transition-transform" />
           </a>
 
           <a
-            href="#skills"
+            href="#project-spotlight"
             className="px-6 py-3.5 rounded-2xl glass-panel border border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800/60 text-slate-200 hover:text-white font-medium text-sm transition-all flex items-center gap-2 group"
           >
-            <Layers className="w-4 h-4 text-cyan-400" />
-            <span>Technical Skills Matrix</span>
+            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <span>Debut App Spotlight</span>
           </a>
 
           <button

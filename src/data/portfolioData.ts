@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
   focus: "Frontend Monorepo Architecture • React.js & TypeScript • Micro-frontends • DevOps & CI/CD • Keycloak SSO",
   location: "Noida, Uttar Pradesh, India",
   phone: "+91-7579-233-972",
-  status: "Software Development Engineer at Coredge.io • Open to High-Impact Opportunities",
+  status: "Software Development Engineer • Open to High-Impact Opportunities",
   bio: "Software Development Engineer with proven expertise architecting scalable monorepo frontend systems, 50+ reusable TypeScript/React component libraries, and micro-frontends. Track record of integrating Keycloak SSO for 10,000+ users and slashing CI/CD deployment times from 45 min to 10 min using Docker and Kubernetes. Experienced in leading engineering teams, driving 25% performance gains, and developing resilient web and mobile applications.",
   github: "https://github.com/NikhilAndola",
   linkedin: "https://linkedin.com/in/nikhilandola",
@@ -79,7 +79,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const WORK_EXPERIENCES: WorkExperience[] = [
   {
-    company: "Coredge.io",
+    company: "Enterprise Cloud & Edge Systems",
     role: "Software Development Engineer",
     period: "December 2022 – Present",
     location: "India",
@@ -150,7 +150,7 @@ export const EDUCATION_DATA: EducationItem[] = [
 export const AWARDS_DATA: AwardItem[] = [
   {
     title: "“Mountain Mover” Certificate of Appreciation",
-    organization: "Coredge.io",
+    organization: "Engineering Excellence Recognition",
     date: "December 2022",
     description: "Honored for achieving the toughest organizational goals through hard work, dedication, and technical excellence in frontend architecture and monorepo delivery.",
     badgeText: "Excellence Award"

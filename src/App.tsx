@@ -2,7 +2,6 @@ import { useState, useCallback } from 'react';
 import { Navbar } from './components/Navbar';
 import { AudioVisualizerCanvas } from './components/AudioVisualizerCanvas';
 import { Hero } from './components/Hero';
-import { ExperienceSection } from './components/ExperienceSection';
 import { SkillsGrid } from './components/SkillsGrid';
 import { MetronomeDemo } from './components/MetronomeDemo';
 import { ProjectDeepDive } from './components/ProjectDeepDive';
@@ -62,8 +61,6 @@ export function App() {
           onTogglePlay={handleTogglePlay}
           bpm={bpm}
         />
-
-        <ExperienceSection />
 
         <SkillsGrid />
 
